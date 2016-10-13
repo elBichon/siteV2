@@ -1,0 +1,11 @@
+{% extends "personnal/header.html" %}
+
+{% block content %}
+	<article>
+	{% for post in object_list %}
+		<h2><a href="/blog/{{post.id}}">{{post.title|safe|linebreaks}}</a></h2><p>{{ post.date|date:"Y-m-d" }}</p>
+			<p>{{ post.cate|safe|linebreaks }}
+			{{ post.resume|safe|linebreaks }}</p>
+	{% endfor %}
+	</article>
+{% endblock %}

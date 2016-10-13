@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>    
+<title>REUGLEWICZ JeanEdouard</title>
+	<head>
+		<title>REUGLEWICZ JeanEdouard</title>
+			<meta charset="utf-8" />
+			{% load staticfiles %}
+ 		<link rel="shortcut icon" href="{%  static 'personnal/img/favicon.ico' %}">
+           	 <link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+		<link rel="stylesheet" href="{% static 'personnal/css/style.css' %}" type = "text/css"/>
+			<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+	<header>
+		<ul class="right">
+			<li><a href="http://facebook.com/"><img class='links' src="{% static 'personnal/img/github.jpeg' %}"></a></li>
+			<li><a href="http://linkedin.com/"><img class='links' src="{% static 'personnal/img/linkedin.jpeg' %}" ></a></li>
+			<li><a href="https://twitter.com/"><img class='links' src="{% static 'personnal/img/twitter.jpeg' %}" ></a></li>
+		 </ul>
+ 		<a href='/'><img src="{% static 'personnal/img/profile.png' %}" id="logo" ></a>
+   			<h1>Bienvenu Sur Mon Site</h1>
+  			<ul>
+    				<li><a href='/'>Home</a></li>
+				<li><a href='/blog/'>Blog</a></li>
+				<li><a href='/contact/'>Contact</a></li>
+				<li><a href='/links/'>Liens</a></li>
+  		  	</ul>
+  	</header> 
+		<article>
+			   <p>{% block content %}
+			   {% endblock %}</p>
+		</article>	
+	<div class="modal-footer"> 
+       <div class="col-md-8 col-md-push-4">
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_linkedin_large' displayText='LinkedIn'></span>
+        <span class='st_facebook_large' displayText='Github'</span>          
+        </div>                             
+     </div>	
+     </body>
+</html>
